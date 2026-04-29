@@ -19,9 +19,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'YOUR_PIXEL_ID');
+fbq('init', '1426895702319498');
 fbq('track', 'PageView');
 </script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1426895702319498&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel -->
 
 <style>
 :root {
@@ -598,7 +600,7 @@ section { padding: 100px 0; }
   border: 1px solid var(--line);
   background: var(--bg-card);
   border-radius: 14px;
-  padding: 32px;
+  padding: 24px;
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s ease;
@@ -611,33 +613,33 @@ section { padding: 100px 0; }
 .problem-num {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 64px;
+  font-size: 48px;
   color: var(--ink-dim);
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   font-weight: 300;
 }
 
 .problem-card h3 {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 500;
   letter-spacing: -0.01em;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   line-height: 1.2;
 }
 
 .problem-card p {
   color: var(--ink-muted);
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .problem-stat {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 10.5px;
   color: var(--accent);
-  margin-top: 16px;
+  margin-top: 14px;
   letter-spacing: 0.05em;
 }
 
@@ -1211,6 +1213,33 @@ section { padding: 100px 0; }
   position: relative;
 }
 
+.demo-calendar-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  background: #f4f1ea;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(200, 255, 94, 0.15);
+  min-height: 720px;
+}
+.demo-calendar-wrap iframe {
+  display: block;
+  width: 100%;
+  min-height: 720px;
+  border: 0;
+}
+@media (max-width: 768px) {
+  .demo-calendar-wrap {
+    border-radius: 12px;
+    min-height: 680px;
+  }
+  .demo-calendar-wrap iframe {
+    min-height: 680px;
+  }
+}
+
 footer {
   padding: 48px 0;
   border-top: 1px solid var(--line);
@@ -1263,7 +1292,7 @@ footer a:hover { color: var(--accent); }
       <a href="#problema">Problema</a>
       <a href="#solucion">Solución</a>
       <a href="#pricing">Precios</a>
-      <a href="#demo" class="nav-cta">Agendar demo</a>
+      <a href="#demo" class="nav-cta" data-presaleflow-demo data-source="nav">Agendar demo</a>
     </div>
   </div>
 </nav>
@@ -1282,7 +1311,7 @@ footer a:hover { color: var(--accent); }
       Cobranza automatizada para desarrolladoras inmobiliarias en preventa. Recordatorios al cliente, alertas a tu equipo y dashboard de cuotas en tiempo real. Sin Excel, sin perseguir clientes.
     </p>
     <div class="hero-cta-row">
-      <a href="#demo" class="btn-primary" onclick="fbq('track','Schedule')">
+      <a href="#demo" class="btn-primary" data-presaleflow-demo data-source="hero">
         Agendar demo gratuita
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -1394,19 +1423,19 @@ footer a:hover { color: var(--accent); }
       <div class="problem-card">
         <div class="problem-num">01</div>
         <h3>Mora descubierta tarde</h3>
-        <p>Cuando tu equipo arma el reporte de fin de mes, los clientes que se atrasaron llevan días sin que nadie los contacte. Tu flujo de caja se mueve sin que lo controles.</p>
+        <p>El reporte llega a fin de mes. Los atrasos llevan días sin contactar y tu flujo de caja se mueve sin control.</p>
         <div class="problem-stat">Detección reactiva, no proactiva</div>
       </div>
       <div class="problem-card">
         <div class="problem-num">02</div>
-        <h3>Horas semanales en seguimiento manual</h3>
-        <p>Tu gerente comercial pasa media jornada cada semana cruzando data en Excel, llamando vendedores y armando reportes para el directorio.</p>
+        <h3>Horas perdidas en seguimiento</h3>
+        <p>Tu gerente pasa media jornada cruzando Excel, llamando vendedores y armando reportes. Tiempo que no vende.</p>
         <div class="problem-stat blue">Tiempo ejecutivo en tareas operativas</div>
       </div>
       <div class="problem-card">
         <div class="problem-num">03</div>
         <h3>Cada cliente caído cuesta caro</h3>
-        <p>Reemplazar un cliente que se cayó significa nueva campaña, nuevo vendedor, nueva comisión. Y mientras tanto, una unidad parada.</p>
+        <p>Nueva campaña, nuevo vendedor, nueva comisión. Y mientras, una unidad parada esperando comprador.</p>
         <div class="problem-stat">Costo silencioso del flujo perdido</div>
       </div>
     </div>
@@ -1562,7 +1591,7 @@ footer a:hover { color: var(--accent); }
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dashboard de cuotas</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Soporte por email</li>
         </ul>
-        <a href="#demo" class="price-cta">Agendar demo</a>
+        <a href="#demo" class="price-cta" data-presaleflow-demo data-source="pricing-starter">Agendar demo</a>
       </div>
       <div class="price-card featured">
         <div class="price-name">Growth</div>
@@ -1576,7 +1605,7 @@ footer a:hover { color: var(--accent); }
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dashboard avanzado</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Soporte prioritario</li>
         </ul>
-        <a href="#demo" class="price-cta">Agendar demo</a>
+        <a href="#demo" class="price-cta" data-presaleflow-demo data-source="pricing-growth">Agendar demo</a>
       </div>
       <div class="price-card">
         <div class="price-name">Pro</div>
@@ -1590,7 +1619,7 @@ footer a:hover { color: var(--accent); }
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Soporte por WhatsApp</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> SLA garantizado</li>
         </ul>
-        <a href="#demo" class="price-cta">Agendar demo</a>
+        <a href="#demo" class="price-cta" data-presaleflow-demo data-source="pricing-pro">Agendar demo</a>
       </div>
     </div>
     <div class="founding-banner">
@@ -1656,10 +1685,16 @@ footer a:hover { color: var(--accent); }
     <p class="final-cta-sub">
       Una demo de 20 minutos. Te mostramos exactamente cómo funcionaría con tu proyecto. Sin compromisos.
     </p>
-    <a href="https://calendly.com/presaleflow/demo" target="_blank" class="btn-primary" onclick="fbq('track','Schedule')">
-      Agendar demo gratuita
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-    </a>
+    <div class="demo-calendar-wrap">
+      <iframe
+        src="https://agenda.presaleflow.com/widget/booking/Daz6I1sBLLkzuGd0vaJz"
+        style="width:100%;border:none;overflow:hidden;"
+        scrolling="no"
+        id="Daz6I1sBLLkzuGd0vaJz_calendar"
+        title="Agenda tu demo de Presaleflow">
+      </iframe>
+      <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+    </div>
   </div>
 </section>
 
@@ -1729,6 +1764,61 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+<!-- ============================================
+     TRACKING DEMO + SCROLL SMOOTH
+     ============================================ -->
+<script>
+(function() {
+  const triggers = document.querySelectorAll('[data-presaleflow-demo]');
+  let intentTracked = false; // Evita disparar InitiateCheckout 50 veces si rebota
+
+  triggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const source = btn.getAttribute('data-source') || 'unknown';
+
+      // Meta Pixel: intent mid-funnel (clic para ir al calendario)
+      // Solo se dispara una vez por sesión para no inflar señales
+      if (!intentTracked && typeof fbq !== 'undefined') {
+        fbq('track', 'InitiateCheckout', {
+          content_name: 'Demo Presaleflow',
+          content_category: 'demo_request',
+          source: source
+        });
+        intentTracked = true;
+      }
+
+      // Scroll smooth a la sección demo (el href ya apunta a #demo, esto solo lo suaviza)
+      const target = document.getElementById('demo');
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Escuchar confirmación de booking desde iframe de GHL (postMessage)
+  window.addEventListener('message', function(e) {
+    if (!e.data) return;
+    const data = typeof e.data === 'string' ? e.data : JSON.stringify(e.data);
+    const isBooking =
+      data.includes('booking_confirmation') ||
+      data.includes('appointment_booked') ||
+      data.includes('form_submitted') ||
+      (e.data.type && typeof e.data.type === 'string' && e.data.type.toLowerCase().includes('book'));
+
+    if (isBooking && typeof fbq !== 'undefined') {
+      // Conversión real: Meta optimiza por esto
+      fbq('track', 'Schedule', {
+        content_name: 'Demo Presaleflow',
+        content_category: 'demo_booked',
+        value: 199,
+        currency: 'USD'
+      });
+    }
+  });
+})();
 </script>
 
 </body>
